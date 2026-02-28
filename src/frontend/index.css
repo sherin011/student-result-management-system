@@ -1,0 +1,174 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("/assets/fonts/BricolageGrotesque-VariableFont_opsz,wdth,wght.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("/assets/fonts/Outfit-VariableFont_wght.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+
+    /* Background: deep dark navy */
+    --background: 0.13 0.04 250;
+    --foreground: 0.95 0.01 240;
+
+    /* Card: slightly lighter dark navy surface */
+    --card: 0.18 0.04 250;
+    --card-foreground: 0.95 0.01 240;
+
+    /* Popover */
+    --popover: 0.18 0.04 250;
+    --popover-foreground: 0.95 0.01 240;
+
+    /* Primary: bright electric blue accent */
+    --primary: 0.65 0.18 250;
+    --primary-foreground: 0.99 0 0;
+
+    /* Secondary: dark navy panel, slightly lighter */
+    --secondary: 0.22 0.04 250;
+    --secondary-foreground: 0.88 0.02 240;
+
+    /* Muted: muted dark slate */
+    --muted: 0.22 0.03 250;
+    --muted-foreground: 0.62 0.04 245;
+
+    /* Accent: medium blue */
+    --accent: 0.28 0.06 250;
+    --accent-foreground: 0.90 0.02 240;
+
+    /* Destructive: warm vivid red */
+    --destructive: 0.55 0.22 25;
+    --destructive-foreground: 0.99 0 0;
+
+    /* Border & input — subtle dark blue border */
+    --border: 0.28 0.06 250;
+    --input: 0.28 0.06 250;
+    --ring: 0.65 0.18 250;
+
+    /* Grade colors — bold and distinct */
+    --grade-a: 0.48 0.2 145;
+    --grade-b: 0.48 0.18 220;
+    --grade-c: 0.55 0.2 75;
+    --grade-fail: 0.52 0.24 25;
+
+    /* Chart */
+    --chart-1: 0.65 0.18 250;
+    --chart-2: 0.55 0.18 145;
+    --chart-3: 0.60 0.18 75;
+    --chart-4: 0.55 0.22 25;
+    --chart-5: 0.55 0.16 200;
+
+    /* Sidebar */
+    --sidebar: 0.16 0.04 250;
+    --sidebar-foreground: 0.95 0.01 240;
+    --sidebar-primary: 0.65 0.18 250;
+    --sidebar-primary-foreground: 0.99 0 0;
+    --sidebar-accent: 0.22 0.04 250;
+    --sidebar-accent-foreground: 0.88 0.02 240;
+    --sidebar-border: 0.28 0.06 250;
+    --sidebar-ring: 0.65 0.18 250;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+}
+
+/* Grade badge styles — vibrant on dark backgrounds */
+.grade-badge-a {
+  background: oklch(0.22 0.14 145);
+  color: oklch(0.78 0.20 145);
+  border: 1.5px solid oklch(0.52 0.18 145);
+}
+.grade-badge-b {
+  background: oklch(0.22 0.12 240);
+  color: oklch(0.75 0.18 240);
+  border: 1.5px solid oklch(0.52 0.18 240);
+}
+.grade-badge-c {
+  background: oklch(0.24 0.12 75);
+  color: oklch(0.82 0.18 75);
+  border: 1.5px solid oklch(0.60 0.16 70);
+}
+.grade-badge-fail {
+  background: oklch(0.22 0.10 25);
+  color: oklch(0.78 0.20 25);
+  border: 1.5px solid oklch(0.55 0.18 25);
+}
+
+/* Header gradient — deep dark navy to vivid blue */
+.header-gradient {
+  background: linear-gradient(135deg,
+    oklch(0.10 0.05 265) 0%,
+    oklch(0.14 0.07 258) 35%,
+    oklch(0.18 0.09 252) 65%,
+    oklch(0.22 0.11 245) 100%
+  );
+}
+
+/* Decorative pattern for header — subtle dot grid */
+.header-pattern {
+  background-image:
+    radial-gradient(circle at 24px 24px, oklch(1 0 0 / 0.06) 2px, transparent 0),
+    radial-gradient(circle at 72px 72px, oklch(1 0 0 / 0.06) 2px, transparent 0);
+  background-size: 96px 96px;
+}
+
+/* Table row hover — subtle dark blue tint */
+.result-row:hover {
+  background: oklch(0.22 0.06 252);
+}
+
+/* Stronger table text — light on dark background */
+.result-row td {
+  color: oklch(0.92 0.01 240);
+}
+
+/* Input focus ring — primary blue */
+input:focus-visible, textarea:focus-visible {
+  outline: 2px solid oklch(0.65 0.18 250);
+  outline-offset: 2px;
+}
+
+/* Input placeholder text — visible on dark bg */
+input::placeholder {
+  color: oklch(0.52 0.04 245);
+}
+
+/* Scrollbar styling — dark blue themed */
+.table-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+.table-scroll::-webkit-scrollbar-track {
+  background: oklch(0.20 0.04 250);
+  border-radius: 3px;
+}
+.table-scroll::-webkit-scrollbar-thumb {
+  background: oklch(0.40 0.10 250);
+  border-radius: 3px;
+}
+.table-scroll::-webkit-scrollbar-thumb:hover {
+  background: oklch(0.55 0.16 250);
+}
