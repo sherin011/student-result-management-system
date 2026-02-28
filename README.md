@@ -14,6 +14,7 @@ This is an Intermediate-level web application developed as part of my **Advanced
 * **Smart Grading:** Assigns grades (A, B, C, or Fail) based on the calculated percentage.
 * **Responsive Design:** Works perfectly on both desktop and mobile browsers.
 * **Validation:** Includes basic checks to ensure marks are entered correctly before processing.
+ 
 ### live demo:https://student-result-management-system-kc2.caffeine.xyz
 
 ### 🚀 How to Use
@@ -26,6 +27,5 @@ This is an Intermediate-level web application developed as part of my **Advanced
 * `index.html` - Contains the UI structure and the CSS styling.
 * `script` (Inside HTML) - Contains the logic for grade calculation and DOM manipulation.
 
----
 **Developed by:** P.Sunitha Sahaya Serin
 **Internship Track:** Advanced Industrial Projects
