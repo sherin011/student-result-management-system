@@ -26,5 +26,5 @@ This is an Intermediate-level web application developed as part of my **Advanced
 * `script` (Inside HTML) - Contains the logic for grade calculation and DOM manipulation.
 
 ---
-**Developed by:** [Un Name Inga Podu]
+**Developed by:** P.Sunitha Sahaya Serin
 **Internship Track:** Advanced Industrial Projects
